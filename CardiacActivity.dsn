@@ -1,0 +1,18 @@
+[ODBC]
+DRIVER=PostgreSQL ODBC Driver(UNICODE)
+DATABASE=CardiacActivity
+SERVER=localhost
+PORT=5432
+CA=d
+A6=
+A7=100
+A8=4096
+B0=255
+B1=8190
+BI=0
+C2=dd_
+CX=1c28b17bb
+A1=7.4-1
+AB=2
+UID=postgres
+PWD=Qwedsa33Qwedsa
