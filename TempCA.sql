@@ -32,21 +32,19 @@ update days_taken_into_account set "Comments" = 'Пробная запись' where "Comments
 
 create table events_on_day (
 "id_EoD" serial primary key,
-"id_DTIA" integer,
+"DateOfEvent" date,
 "TimeOfEvent" time,
 "SYS_Pressure" integer,
 "DIA_Pressure" integer,
 "Pulse" integer,
 "Comments" varchar (255),
-"ActiveRecord" boolean default true,
-FOREIGN KEY ("id_DTIA") REFERENCES days_taken_into_account ("id_DTIA")
-);
+"ActiveRecord" boolean default true);
 
 drop table events_on_day;
 
 insert into events_on_day
-("id_DTIA", "TimeOfEvent", "SYS_Pressure", "DIA_Pressure", "Pulse", "Comments")
-values (1, '6:00', 120, 80, 60, 'Пробная запись замера');
+("DateOfEvent", "TimeOfEvent", "SYS_Pressure", "DIA_Pressure", "Pulse", "Comments")
+values ('2021-11-21', '6:00', 120, 80, 60, 'Пробная запись замера');
 
 select * from events_on_day;
 

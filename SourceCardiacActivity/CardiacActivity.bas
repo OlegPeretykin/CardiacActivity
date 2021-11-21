@@ -3,7 +3,7 @@ Option Explicit
 ' Глобальные переменные и функции
 
 'Подключение таблиц из СУБД Postgres
-Public Sub SystemDeployment()
+Public Function SystemDeployment()
 Dim db As DAO.Database, str_conn$
 Dim tdf As DAO.TableDef, ODBCTableName$, AccessTableName$
 Dim TablesArray() As Variant, i&
@@ -37,4 +37,4 @@ Next i
 
 Set db = Nothing
 Set tdf = Nothing
-End Sub
+End Function
